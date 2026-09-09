@@ -15,15 +15,15 @@ export default function CollectionCard({
 }: CollectionCardProps) {
   return (
     <article
-      className={`group relative overflow-hidden rounded-[2rem] border border-brown/10 bg-charcoal-teal ${className}`}
+      className={`group relative flex h-full w-full flex-col overflow-hidden rounded-[2rem] border border-brown/10 bg-charcoal-teal ${className}`}
     >
-      <div className="relative h-80 w-full overflow-hidden sm:h-[420px] md:h-[530px]">
+      <div className="relative h-[280px] w-full flex-1 overflow-hidden sm:h-[360px] md:h-[420px] lg:h-[500px]">
         <Image
           src={image}
           alt={`${title} collection by Heaven Furniture Mart`}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal-teal/75 via-charcoal-teal/10 to-charcoal-teal/40" />
       </div>
