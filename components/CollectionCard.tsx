@@ -15,9 +15,9 @@ export default function CollectionCard({
 }: CollectionCardProps) {
   return (
     <article
-      className={`group relative flex h-full w-full flex-col overflow-hidden rounded-[2rem] border border-brown/10 bg-charcoal-teal ${className}`}
+      className={`group relative w-full overflow-hidden rounded-[2rem] border border-brown/10 bg-charcoal-teal ${className}`}
     >
-      <div className="relative h-[280px] w-full flex-1 overflow-hidden sm:h-[360px] md:h-[420px] lg:h-[500px]">
+      <div className="relative h-[280px] w-full overflow-hidden sm:h-[360px] md:h-[420px] lg:h-[500px]">
         <Image
           src={image}
           alt={`${title} collection by Heaven Furniture Mart`}

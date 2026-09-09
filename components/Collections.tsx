@@ -50,12 +50,11 @@ export default function Collections() {
 
         <div className="mt-8 grid gap-4 sm:gap-5 md:mt-12 md:grid-cols-12 md:items-stretch md:gap-6">
           {collectionItems.map((item) => (
-            <Reveal key={item.title} className={`h-full ${item.className}`}>
+            <Reveal key={item.title} className={item.className}>
               <CollectionCard
                 title={item.title}
                 tagline={item.tagline}
                 image={item.image}
-                className="h-full w-full"
               />
             </Reveal>
           ))}
