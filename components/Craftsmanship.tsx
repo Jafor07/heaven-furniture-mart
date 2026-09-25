@@ -5,7 +5,7 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const detailImages = [
-  "/images/details/sofa1.jpeg",
+  "/images/bedroom/bedroom.jpeg",
   "/images/details/sofa2.jpeg",
   "/images/details/sofa3.jpeg",
 ];
@@ -13,23 +13,20 @@ const detailImages = [
 export default function Craftsmanship() {
   return (
     <section id="craftsmanship" className="bg-charcoal-teal" aria-label="Craftsmanship">
-      <Container className="py-20 md:py-32">
+      <Container className="section-y">
         <Reveal>
           <SectionHeading
             label="CRAFTSMANSHIP"
-            title={"Designed. Crafted.\nCustomized."}
-            className="max-w-xl text-ivory"
+            title="Designed, crafted, and customized in-house"
+            tone="light"
+            className="max-w-2xl"
           />
         </Reveal>
 
-        <div className="mt-8 grid gap-4 sm:gap-5 md:mt-12 md:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:mt-14 md:grid-cols-3 lg:gap-6">
           {detailImages.map((image, index) => (
             <Reveal key={image} delay={index * 0.08}>
-              <div
-                className={`relative h-64 overflow-hidden rounded-[1.75rem] border border-white/10 sm:h-72 md:h-90 ${
-                  index === 1 ? "md:translate-y-8" : ""
-                }`}
-              >
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10">
                 <Image
                   src={image}
                   alt="Close-up of handcrafted furniture detail"

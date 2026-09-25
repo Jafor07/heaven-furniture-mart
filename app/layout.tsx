@@ -16,7 +16,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://heavenfurnituremart.com"),
-  title: "Heaven Furniture Mart — Luxury Bespoke Furniture in Chattogram",
+  title: "Heaven Furniture Mart | Luxury Bespoke Furniture in Chattogram",
   description:
     "Bespoke furniture and interior styling designed around your space and taste for a home that feels truly yours.",
   icons: {
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     apple: "/icon.svg",
   },
   openGraph: {
-    title: "Heaven Furniture Mart — Luxury Bespoke Furniture in Chattogram",
+    title: "Heaven Furniture Mart | Luxury Bespoke Furniture in Chattogram",
     description:
       "Bespoke furniture and interior styling designed around your space and taste for a home that feels truly yours.",
     images: [{ url: "/images/hero/hero2.jpeg", alt: "Heaven Furniture Mart showroom and tailored furniture styling" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Heaven Furniture Mart — Luxury Bespoke Furniture in Chattogram",
+    title: "Heaven Furniture Mart | Luxury Bespoke Furniture in Chattogram",
     description:
       "Bespoke furniture and interior styling designed around your space and taste for a home that feels truly yours.",
     images: ["/images/hero/hero2.jpeg"],

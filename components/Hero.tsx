@@ -2,14 +2,16 @@
 
 import { motion, useReducedMotion } from "motion/react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 import MagneticButton from "@/components/motion/MagneticButton";
 import Parallax from "@/components/motion/Parallax";
 import { HERO_IMAGE, WHATSAPP_URL } from "@/lib/constants";
 import Container from "@/components/ui/Container";
 
-const heroWords = ["Furniture,", "Crafted", "Around", "You."];
+// Phrases never break internally, so the headline wraps as two balanced
+// lines ("Furniture, Crafted / Around You") instead of one word per line.
+const heroLines = ["Furniture, Crafted", "Around You"];
 
 export default function Hero() {
   const reduceMotion = useReducedMotion();
@@ -38,7 +40,7 @@ export default function Hero() {
       </Parallax>
 
       <motion.div
-        className="absolute inset-0 bg-charcoal-teal/55"
+        className="absolute inset-0 bg-gradient-to-t from-charcoal-teal/90 via-charcoal-teal/55 to-charcoal-teal/40"
         initial={shouldAnimate ? { opacity: 0 } : false}
         animate={shouldAnimate ? { opacity: 1 } : undefined}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -46,29 +48,31 @@ export default function Hero() {
 
       <Container className="relative z-10 pb-14 pt-28 md:pb-24 md:pt-32">
         <motion.p
-          className="mb-4 text-[0.62rem] font-medium tracking-[0.28em] text-brass sm:text-xs"
+          className="mb-5 text-xs font-medium tracking-[0.28em] text-wood-tan"
           initial={shouldAnimate ? { opacity: 0, y: 18 } : false}
           animate={shouldAnimate ? { opacity: 1, y: 0 } : undefined}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          HEAVEN FURNITURE MART
+          LUXURY BESPOKE FURNITURE
         </motion.p>
 
-        <h1 className="max-w-3xl font-display text-[2.7rem] leading-[0.96] text-ivory sm:text-5xl md:text-6xl lg:text-7xl">
-          {heroWords.map((word, index) => (
-            <motion.span
-              key={word}
-              className="mb-0 block"
-              initial={shouldAnimate ? { opacity: 0, y: 40 } : false}
-              animate={shouldAnimate ? { opacity: 1, y: 0 } : undefined}
-              transition={{
-                duration: 0.8,
-                ease: "easeOut",
-                delay: 0.2 + index * 0.12,
-              }}
-            >
-              {word}
-            </motion.span>
+        <h1 className="max-w-4xl font-display text-[clamp(2rem,9.6vw,4.75rem)] leading-[1.04] text-ivory">
+          {heroLines.map((line, index) => (
+            <Fragment key={line}>
+              {index > 0 ? " " : null}
+              <motion.span
+                className="inline-block whitespace-nowrap"
+                initial={shouldAnimate ? { opacity: 0, y: 40 } : false}
+                animate={shouldAnimate ? { opacity: 1, y: 0 } : undefined}
+                transition={{
+                  duration: 0.8,
+                  ease: "easeOut",
+                  delay: 0.2 + index * 0.12,
+                }}
+              >
+                {line}
+              </motion.span>
+            </Fragment>
           ))}
         </h1>
 
@@ -79,7 +83,7 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.65 }}
         >
           Bespoke furniture and interior styling designed around your space,
-          taste, and way of living — from our studio in Agrabad, Chattogram.
+          taste, and way of living, from our studio in Agrabad, Chattogram.
         </motion.p>
 
         <motion.div

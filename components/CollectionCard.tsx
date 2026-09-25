@@ -15,23 +15,24 @@ export default function CollectionCard({
 }: CollectionCardProps) {
   return (
     <article
-      className={`group relative w-full overflow-hidden rounded-[2rem] border border-brown/10 bg-charcoal-teal ${className}`}
+      className={`group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-brown/10 bg-white/70 ${className}`}
     >
-      <div className="relative h-[280px] w-full overflow-hidden sm:h-[360px] md:h-[420px] lg:h-[500px]">
+      {/* Square frame matches the square source photos, so their printed
+          Heaven logo and edges are never cropped */}
+      <div className="relative aspect-square w-full overflow-hidden bg-charcoal-teal">
         <Image
           src={image}
           alt={`${title} collection by Heaven Furniture Mart`}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal-teal/75 via-charcoal-teal/10 to-charcoal-teal/40" />
       </div>
-      <div className="absolute inset-x-0 bottom-0 p-5 text-ivory sm:p-6 md:p-8">
-        <p className="text-[0.66rem] font-medium uppercase tracking-[0.22em] text-wood-tan/90 sm:text-xs">
+      <div className="flex flex-1 flex-col border-t border-brown/10 px-6 py-5">
+        <h3 className="font-display text-2xl leading-tight text-brown">
           {title}
-        </p>
-        <p className="mt-2 max-w-xs text-sm leading-relaxed text-ivory/90 sm:text-base md:text-lg">
+        </h3>
+        <p className="mt-1.5 text-sm leading-relaxed text-brown/75 sm:text-[0.95rem]">
           {tagline}
         </p>
       </div>

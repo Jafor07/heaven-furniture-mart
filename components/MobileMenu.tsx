@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { X } from "lucide-react";
 import { useEffect } from "react";
 
+import Logo from "@/components/ui/Logo";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 const menuLinks = [
@@ -55,11 +56,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             aria-label="Mobile menu"
           >
             <div className="flex items-center justify-between pb-8">
-              <p className="font-display text-2xl text-brown">Menu</p>
+              <Logo tone="dark" onClick={onClose} />
               <button
                 type="button"
                 aria-label="Close menu"
-                className="rounded-md p-2 text-brown"
+                className="-mr-2 rounded-md p-2 text-brown"
                 onClick={onClose}
               >
                 <X size={24} />

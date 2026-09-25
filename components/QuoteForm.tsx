@@ -43,7 +43,7 @@ export default function QuoteForm() {
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid gap-5 md:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-2 block text-sm font-medium text-brown">
+          <label htmlFor="name" className="mb-2 block text-sm font-medium text-ivory/85">
             Name
           </label>
           <input
@@ -51,14 +51,14 @@ export default function QuoteForm() {
             name="name"
             value={form.name}
             onChange={handleChange}
-            className="w-full rounded-md border border-brown/20 bg-white px-4 py-3 text-brown placeholder:text-brown/50"
+            className="w-full rounded-md border border-brown/20 bg-white px-4 py-3 text-brown placeholder:text-brown/60"
             placeholder="Your name"
             autoComplete="name"
           />
         </div>
 
         <div>
-          <label htmlFor="phone" className="mb-2 block text-sm font-medium text-brown">
+          <label htmlFor="phone" className="mb-2 block text-sm font-medium text-ivory/85">
             Phone
           </label>
           <input
@@ -67,7 +67,7 @@ export default function QuoteForm() {
             type="tel"
             value={form.phone}
             onChange={handleChange}
-            className="w-full rounded-md border border-brown/20 bg-white px-4 py-3 text-brown placeholder:text-brown/50"
+            className="w-full rounded-md border border-brown/20 bg-white px-4 py-3 text-brown placeholder:text-brown/60"
             placeholder="Your phone number"
             autoComplete="tel"
           />
@@ -78,7 +78,7 @@ export default function QuoteForm() {
         <div>
           <label
             htmlFor="furnitureType"
-            className="mb-2 block text-sm font-medium text-brown"
+            className="mb-2 block text-sm font-medium text-ivory/85"
           >
             Furniture Type
           </label>
@@ -87,13 +87,13 @@ export default function QuoteForm() {
             name="furnitureType"
             value={form.furnitureType}
             onChange={handleChange}
-            className="w-full rounded-md border border-brown/20 bg-white px-4 py-3 text-brown placeholder:text-brown/50"
+            className="w-full rounded-md border border-brown/20 bg-white px-4 py-3 text-brown placeholder:text-brown/60"
             placeholder="Sofa, bed, dining set..."
           />
         </div>
 
         <div>
-          <label htmlFor="style" className="mb-2 block text-sm font-medium text-brown">
+          <label htmlFor="style" className="mb-2 block text-sm font-medium text-ivory/85">
             Preferred Style
           </label>
           <input
@@ -101,14 +101,14 @@ export default function QuoteForm() {
             name="style"
             value={form.style}
             onChange={handleChange}
-            className="w-full rounded-md border border-brown/20 bg-white px-4 py-3 text-brown placeholder:text-brown/50"
+            className="w-full rounded-md border border-brown/20 bg-white px-4 py-3 text-brown placeholder:text-brown/60"
             placeholder="Modern, classic, minimal..."
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="message" className="mb-2 block text-sm font-medium text-brown">
+        <label htmlFor="message" className="mb-2 block text-sm font-medium text-ivory/85">
           Message
         </label>
         <textarea
@@ -117,7 +117,7 @@ export default function QuoteForm() {
           rows={5}
           value={form.message}
           onChange={handleChange}
-          className="w-full rounded-md border border-brown/20 bg-white px-4 py-3 text-brown placeholder:text-brown/50"
+          className="w-full rounded-md border border-brown/20 bg-white px-4 py-3 text-brown placeholder:text-brown/60"
           placeholder="Tell us about your space, size, and ideas."
         />
       </div>

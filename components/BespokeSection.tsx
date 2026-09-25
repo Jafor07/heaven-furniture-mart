@@ -8,12 +8,12 @@ import SectionHeading from "@/components/ui/SectionHeading";
 export default function BespokeSection() {
   return (
     <section id="bespoke" className="bg-ivory" aria-label="Bespoke furniture">
-      <Container className="grid gap-10 py-24 md:grid-cols-[0.95fr_1.05fr] md:items-center md:gap-16">
+      <Container className="section-y grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-center md:gap-16">
         <Reveal>
           <div>
             <SectionHeading
               label="BESPOKE DESIGN"
-              title="Built for Your Space. Made for Your Taste."
+              title="Built for your space, made for your taste"
               className="max-w-xl"
             />
             <p className="mt-8 max-w-xl text-base leading-relaxed text-brown/85 md:text-lg">
@@ -27,7 +27,7 @@ export default function BespokeSection() {
           </div>
         </Reveal>
 
-        <Reveal className="relative h-[420px] overflow-hidden rounded-[2rem] border border-brown/10 bg-charcoal-teal md:h-[560px]">
+        <Reveal className="relative h-[420px] overflow-hidden rounded-2xl border border-brown/10 bg-charcoal-teal md:h-[560px]">
           <ImageReveal
             src="/images/bespoke/bespoke.jpeg"
             alt="Custom furniture designed for a home by Heaven Furniture Mart"

@@ -8,6 +8,7 @@ import {
 } from "@/lib/constants";
 import Reveal from "@/components/motion/Reveal";
 import Container from "@/components/ui/Container";
+import Logo from "@/components/ui/Logo";
 
 const footerLinks = [
   { label: "About", href: "#about" },
@@ -20,14 +21,14 @@ const footerLinks = [
 export default function Footer() {
   return (
     <footer className="bg-charcoal-teal text-ivory">
-      <Container className="grid gap-10 py-14 md:grid-cols-[1.4fr_0.8fr_1fr] md:gap-10 md:py-16">
-        <Reveal>
+      <Container className="grid gap-10 py-14 sm:grid-cols-2 md:grid-cols-[1.4fr_0.8fr_1fr] md:py-16">
+        <Reveal className="sm:col-span-2 md:col-span-1">
           <div>
-            <p className="font-display text-2xl text-ivory md:text-3xl">Heaven Furniture Mart</p>
-            <p className="mt-3 text-[0.64rem] uppercase tracking-[0.2em] text-wood-tan/85 sm:text-sm">
+            <Logo className="h-12 md:h-14" />
+            <p className="mt-5 max-w-xs text-xs uppercase leading-relaxed tracking-[0.18em] text-wood-tan">
               Luxury Bespoke Furniture & Interior Styling
             </p>
-            <div className="mt-6 space-y-2 text-sm text-ivory/75 md:mt-8">
+            <div className="mt-6 space-y-2 text-sm text-ivory/80">
               <p>{ADDRESS}</p>
               <a href={`tel:${PHONE_NUMBER.replace(/\s+/g, "")}`} className="block">
                 {PHONE_NUMBER}
@@ -41,7 +42,7 @@ export default function Footer() {
 
         <Reveal>
           <div>
-            <p className="text-[0.64rem] font-medium uppercase tracking-[0.24em] text-wood-tan/90 md:text-xs">
+            <p className="text-xs font-medium uppercase tracking-[0.24em] text-wood-tan">
               Explore
             </p>
             <ul className="mt-5 space-y-3 text-sm text-ivory/80 md:mt-6">
@@ -58,7 +59,7 @@ export default function Footer() {
 
         <Reveal>
           <div>
-            <p className="text-[0.64rem] font-medium uppercase tracking-[0.24em] text-wood-tan/90 md:text-xs">
+            <p className="text-xs font-medium uppercase tracking-[0.24em] text-wood-tan">
               Social
             </p>
             <ul className="mt-5 space-y-3 text-sm text-ivory/80 md:mt-6">
@@ -83,7 +84,7 @@ export default function Footer() {
       </Container>
 
       <div className="border-t border-white/10">
-        <Container className="flex flex-col gap-2 py-5 text-[0.62rem] uppercase tracking-[0.18em] text-ivory/60 md:flex-row md:items-center md:justify-between md:text-xs">
+        <Container className="flex flex-col gap-2 py-5 text-xs uppercase tracking-[0.18em] text-ivory/65 md:flex-row md:items-center md:justify-between md:text-xs">
           <span>© 2026 Heaven Furniture Mart</span>
           <span>Designed. Crafted. Customized.</span>
         </Container>

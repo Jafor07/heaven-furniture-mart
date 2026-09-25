@@ -8,49 +8,53 @@ const collectionItems = [
     title: "Living Room",
     tagline: "Spaces made for slowing down.",
     image: "/images/living/living.jpeg",
-    className: "md:col-span-7",
   },
   {
     title: "Bedroom",
     tagline: "Comfort, crafted with intention.",
-    image: "/images/bedroom/bedroom.jpeg",
-    className: "md:col-span-5",
+    image: "/images/hero/hero3.jpeg",
   },
   {
     title: "Dining",
     tagline: "Made for meals worth lingering over.",
     image: "/images/dining/dinning1.jpeg",
-    className: "md:col-span-5",
   },
   {
     title: "Office & Study",
     tagline: "Workspaces with character.",
-    image: "/images/office/office2.jpeg",
-    className: "md:col-span-7",
+    image: "/images/office/office3.jpeg",
   },
   {
     title: "Bespoke",
     tagline: "Not off the shelf. Made for you.",
-    image: "/images/bespoke/bespoke4.jpeg",
-    className: "md:col-span-12",
+    image: "/images/bespoke/bespoke2.jpeg",
+  },
+  {
+    title: "Interior Styling",
+    tagline: "Whole rooms, styled as one.",
+    image: "/images/hero/hero .jpeg",
   },
 ];
 
 export default function Collections() {
   return (
     <section id="collections" aria-label="Collections" className="bg-ivory">
-      <Container className="py-24 md:py-32">
+      <Container className="section-y">
         <Reveal>
           <SectionHeading
             label="OUR COLLECTIONS"
-            title="Purposeful pieces, tailored to your life."
+            title="Purposeful pieces, tailored to your life"
             className="max-w-3xl"
           />
         </Reveal>
 
-        <div className="mt-8 grid gap-4 sm:gap-5 md:mt-12 md:grid-cols-12 md:items-stretch md:gap-6">
+        {/* Equal-size cards; flex-wrap centres any partial last row instead of stretching it */}
+        <div className="mt-10 flex flex-wrap justify-center gap-5 md:mt-14 lg:gap-6">
           {collectionItems.map((item) => (
-            <Reveal key={item.title} className={item.className}>
+            <Reveal
+              key={item.title}
+              className="w-full sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-3rem)/3)]"
+            >
               <CollectionCard
                 title={item.title}
                 tagline={item.tagline}

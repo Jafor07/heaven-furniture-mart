@@ -15,20 +15,20 @@ const trustPoints = [
 export default function TrustSection() {
   return (
     <section id="trust" className="bg-ivory" aria-label="Why people trust Heaven Furniture Mart">
-      <Container className="py-20 md:py-32">
+      <Container className="section-y">
         <Reveal>
           <SectionHeading
             label="WHY CLIENTS CHOOSE US"
-            title="Thoughtful details. Honest craft. A home that feels like yours."
+            title="Thoughtful details, honest craft, a home that feels like yours"
             className="max-w-3xl"
           />
         </Reveal>
 
         <ul className="mt-8 max-w-4xl space-y-4 border-t border-brown/15 pt-6 text-base leading-relaxed text-brown/85 sm:mt-10 sm:text-lg md:mt-12 md:space-y-5 md:pt-8 md:text-xl">
           {trustPoints.map((point, index) => (
-            <Reveal key={point} delay={index * 0.06}>
-              <li className="border-b border-brown/15 pb-4 md:pb-5">{point}</li>
-            </Reveal>
+            <li key={point} className="border-b border-brown/15 pb-4 md:pb-5">
+              <Reveal delay={index * 0.06}>{point}</Reveal>
+            </li>
           ))}
         </ul>
       </Container>

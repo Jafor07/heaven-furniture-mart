@@ -11,12 +11,12 @@ import SectionHeading from "@/components/ui/SectionHeading";
 export default function Showroom() {
   return (
     <section id="showroom" className="bg-ivory" aria-label="Showroom visit">
-      <Container className="grid gap-8 py-20 sm:gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-center md:gap-16 md:py-24">
+      <Container className="section-y grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-center md:gap-16">
         <Reveal className="order-2 md:order-1">
           <div>
             <SectionHeading
               label="SHOWROOM"
-              title="Come See It in Person."
+              title="Come see it in person"
               className="max-w-xl"
             />
             <p className="mt-6 text-base leading-relaxed text-brown/85 sm:text-lg md:mt-8">
@@ -27,7 +27,7 @@ export default function Showroom() {
                 href={SHOWROOM_MAP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-fit text-sm font-medium tracking-[0.18em] text-brass underline decoration-wood-tan underline-offset-8"
+                className="w-fit text-sm font-medium tracking-[0.18em] text-brass-deep underline decoration-wood-tan underline-offset-8"
               >
                 Visit the Showroom
               </a>
@@ -41,7 +41,7 @@ export default function Showroom() {
           </div>
         </Reveal>
 
-        <Reveal className="order-1 relative h-72 overflow-hidden rounded-4xl border border-brown/10 sm:h-80 md:order-2 md:h-140">
+        <Reveal className="order-1 relative aspect-[4/3] overflow-hidden rounded-2xl border border-brown/10 md:order-2">
           <ImageReveal
             src="/images/showroom/images.jpeg"
             alt="Heaven Furniture Mart showroom in Agrabad, Chattogram"

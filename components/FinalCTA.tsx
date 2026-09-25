@@ -7,19 +7,19 @@ import Container from "@/components/ui/Container";
 export default function FinalCTA() {
   return (
     <section id="contact" className="bg-ivory" aria-label="Final call to action">
-      <Container className="py-24 md:py-32">
-        <Reveal className="rounded-[2rem] bg-charcoal-teal px-6 py-14 text-ivory md:px-12 md:py-16">
+      <Container className="section-y">
+        <Reveal className="rounded-2xl bg-charcoal-teal px-5 py-12 text-ivory sm:px-10 md:px-14 md:py-16">
           <p className="text-xs font-medium tracking-[0.28em] text-brass">
             START YOUR PROJECT
           </p>
-          <h2 className="mt-6 max-w-4xl font-display text-4xl leading-tight text-ivory md:text-5xl lg:text-6xl">
-            Let&apos;s Create Something That Belongs to You.
+          <h2 className="mt-4 max-w-3xl font-display text-[clamp(1.75rem,8vw,2.25rem)] leading-[1.12] text-ivory sm:text-4xl md:text-[2.75rem] lg:text-5xl">
+            Let&apos;s create something that belongs to you
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/80 md:text-lg">
             Tell us about your space, your taste, and what you have in mind.
           </p>
 
-          <div className="mt-10 flex flex-col gap-6 md:flex-row md:items-center">
+          <div className="mt-10 flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-8">
             <MagneticButton href={WHATSAPP_URL} external>
               Request a Quote
             </MagneticButton>
@@ -39,7 +39,7 @@ export default function FinalCTA() {
           </a>
 
           <div className="mt-12 border-t border-white/10 pt-8">
-            <h3 className="mb-6 text-lg font-medium tracking-[0.18em] text-brass uppercase">
+            <h3 className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-brass">
               Share your project details
             </h3>
             <QuoteForm />

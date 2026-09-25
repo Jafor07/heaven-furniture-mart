@@ -1,10 +1,12 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { motion, useScroll, useSpring } from "motion/react";
 import { useEffect, useState } from "react";
 
 import MobileMenu from "@/components/MobileMenu";
+import Container from "@/components/ui/Container";
+import Logo from "@/components/ui/Logo";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 const navLinks = [
@@ -38,29 +40,23 @@ export default function Navbar() {
         style={{ scaleX: progress }}
       />
 
-      <div className="border-b border-white/10 bg-charcoal-teal/80 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-10 md:py-4">
-          <a
-            href="#top"
-            className="font-display text-lg text-ivory md:text-2xl"
-            aria-label="Go to top"
-          >
-            Heaven Furniture Mart
-          </a>
+      <div className="border-b border-white/10 bg-charcoal-teal/95 backdrop-blur-sm">
+        <Container className="flex items-center justify-between gap-6 py-3.5 md:py-4">
+          <Logo preload />
 
-          <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">
+          <nav className="hidden items-center gap-7 lg:flex xl:gap-9" aria-label="Main navigation">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm text-ivory/80 transition-opacity hover:text-ivory focus-visible:text-ivory"
+                className="text-sm text-ivory/85 transition-colors hover:text-ivory focus-visible:text-ivory"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <a
               href={WHATSAPP_URL}
               target="_blank"
@@ -76,12 +72,12 @@ export default function Navbar() {
             aria-label="Open menu"
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
-            className="inline-flex items-center justify-center rounded-md p-2 text-ivory md:hidden"
+            className="inline-flex items-center justify-center -mr-2 rounded-md p-2 text-ivory lg:hidden"
             onClick={() => setIsOpen(true)}
           >
             <Menu size={24} />
           </button>
-        </div>
+        </Container>
       </div>
 
       <MobileMenu isOpen={isOpen} onClose={() => setIsOpen(false)} />

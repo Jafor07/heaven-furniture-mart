@@ -6,6 +6,7 @@
   --color-brass: #b4915b;
   --color-brown: #3e2b22;
   --color-wood-tan: #c9a374;
+  --color-brass-deep: #7d5f33;
 }
 
 @theme inline {
@@ -14,6 +15,8 @@
   --color-brass: #b4915b;
   --color-brown: #3e2b22;
   --color-wood-tan: #c9a374;
+  /* Deeper brass for small accent text on ivory, where brass fails contrast */
+  --color-brass-deep: #7d5f33;
   --font-display: var(--font-playfair);
   --font-sans: var(--font-inter);
 }
@@ -30,6 +33,29 @@ body {
 
 img {
   display: block;
+}
+
+/* Balanced headings, no orphaned last word in body copy */
+h1,
+h2,
+h3,
+h4,
+blockquote {
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+/* Shared vertical rhythm for every page section */
+@utility section-y {
+  padding-block: 5rem;
+
+  @media (width >= 48rem) {
+    padding-block: 7rem;
+  }
 }
 
 * {
